@@ -147,6 +147,9 @@ files = [
 aiofiles = {version = "*", optional = true, markers = "extra == \"openai\""}
 autogen-agentchat = {version = "0.4.9.2", optional = true, markers = "extra == \"magentic-one\""}
 autogen-core = "0.4.9.2"
+azure-ai-inference = {version = ">=1.0.0b7", optional = true, markers = "extra == \"azure\""}
+azure-core = {version = "*", optional = true, markers = "extra == \"azure\""}
+azure-identity = {version = "*", optional = true, markers = "extra == \"azure\""}
 markitdown = {version = ">=0.0.1,<0.1.0", optional = true, markers = "extra == \"magentic-one\""}
 openai = {version = ">=1.52.2", optional = true, markers = "extra == \"openai\""}
 pillow = {version = ">=11.0.0", optional = true, markers = "extra == \"magentic-one\""}
@@ -205,6 +208,28 @@ files = [
 azure-core = ">=1.30.0"
 isodate = ">=0.6.1"
 typing-extensions = ">=4.6.0"
+
+[[package]]
+name = "azure-ai-inference"
+version = "1.0.0b9"
+description = "Microsoft Azure AI Inference Client Library for Python"
+optional = false
+python-versions = ">=3.8"
+groups = ["main"]
+markers = "python_version == \"3.11\" or python_version >= \"3.12\""
+files = [
+    {file = "azure_ai_inference-1.0.0b9-py3-none-any.whl", hash = "sha256:49823732e674092dad83bb8b0d1b65aa73111fab924d61349eb2a8cdc0493990"},
+    {file = "azure_ai_inference-1.0.0b9.tar.gz", hash = "sha256:1feb496bd84b01ee2691befc04358fa25d7c344d8288e99364438859ad7cd5a4"},
+]
+
+[package.dependencies]
+azure-core = ">=1.30.0"
+isodate = ">=0.6.1"
+typing-extensions = ">=4.6.0"
+
+[package.extras]
+opentelemetry = ["azure-core-tracing-opentelemetry"]
+prompts = ["pyyaml"]
 
 [[package]]
 name = "azure-core"
@@ -2430,4 +2455,4 @@ type = ["pytest-mypy"]
 [metadata]
 lock-version = "2.1"
 python-versions = ">=3.11"
-content-hash = "6e70b47872145ec292ca5b94b5131a5b1a2237f5458cf4679bfdcc1284fab3c1"
+content-hash = "b63c3b5a8259ad78d400a9eedc18240e6ead9bdb1d15d95d86fc50c7fdc6dcd2"
