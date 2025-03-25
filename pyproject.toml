@@ -8,6 +8,7 @@ authors = [
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
+    "magentic-one-cli (>=0.2.3,<0.3.0)"
 ]
 
 
